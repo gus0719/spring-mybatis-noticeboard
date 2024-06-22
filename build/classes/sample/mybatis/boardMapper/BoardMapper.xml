@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+       Copyright 2009-2022 the original author or authors.
+
+       Licensed under the Apache License, Version 2.0 (the "License");
+       you may not use this file except in compliance with the License.
+       You may obtain a copy of the License at
+
+          https://www.apache.org/licenses/LICENSE-2.0
+
+       Unless required by applicable law or agreed to in writing, software
+       distributed under the License is distributed on an "AS IS" BASIS,
+       WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+       See the License for the specific language governing permissions and
+       limitations under the License.
+
+-->
+<!DOCTYPE mapper
+    PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+    "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="sample.mybatis.boardMapper.BoardMapper">
+	<!-- 게시글 리스트 날짜기준 내림차순 -->
+	<select id="bodSel" resultType="sample.spring.noticeBoard.BoardV01DTO">
+		select * from boardV01
+		order by bod_logtime desc
+	</select>
+	
+	<!-- 게시글 선택 -->
+	<select id="selSubject" resultType="sample.spring.noticeBoard.BoardV01DTO">
+		select * from boardV01
+		where bod_no = #{bod_no}
+	</select>
+	
+	<!-- 게시글의 최대 번호값 -->
+	<select id="bodMaxNo" resultType="Integer">
+		select max(bod_no)
+		from boardV01
+	</select>
+	
+	<!-- 게시글 삽입 -->
+	<insert id="bodIns" parameterType="sample.spring.noticeBoard.BoardV01DTO">
+		insert into boardV01
+		values(
+			#{bod_no},
+			#{bod_writer},
+			#{bod_email},
+			#{bod_subject},
+			#{bod_pwd},
+			sysdate,
+			#{bod_content},
+			0,
+			#{bod_connIp}
+		)
+	</insert>
+	
+	<!-- 게시글 조회수 증가 -->
+	<update id="addReadCnt" parameterType="sample.spring.noticeBoard.BoardV01DTO">
+		update boardV01 set
+			bod_readCnt = bod_readCnt + 1
+		where bod_no = #{bod_no}
+	</update>
+	
+	<!-- 게시글 수정 -->
+	<update id="bodUpd" parameterType="sample.spring.noticeBoard.BoardV01DTO">
+		update boardV01 set
+			bod_writer = #{bod_writer},
+			bod_pwd = #{bod_pwd},
+			bod_subject = #{bod_subject},
+			bod_email = #{bod_email},
+			bod_content = #{bod_content}
+		where
+			bod_no = #{bod_no}
+	</update>
+	
+	<!-- 게시글 삭제 -->
+	<delete id="bodDel" parameterType="sample.spring.noticeBoard.BoardV01DTO">
+		delete from boardV01
+		where bod_no = #{bod_no} AND bod_pwd = #{bod_pwd}
+	</delete>
+</mapper>

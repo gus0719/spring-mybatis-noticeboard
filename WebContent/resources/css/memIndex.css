@@ -1,0 +1,87 @@
+/* Div Wrapper --------------------------*/
+#wrap{
+	margin : auto;
+	width : 1200px;
+}
+body{
+	font-size : 20px;
+	font-family : Ariel;
+}
+p{
+	font-size : 34px;
+	font-weight : bold;
+	border-left : 10px solid black;
+	border-bottom : 3px solid black;
+}
+nav{
+	margin : auto;
+}
+#mainImg{
+	display : block;
+	width : 800px;
+	
+	margin : auto;
+}
+footer{
+	margin : 20px auto;
+}
+
+/* Navigation -------------------------*/
+/* Top ------------------------*/
+.Top{
+	list-style-type: none;
+	width : auto;
+	height : 55px;
+	background-color: white;
+	margin-bottom : 20px;
+}
+.Top li{
+	float : left;
+	padding : 10px;
+}
+.Top li a{
+	margin : auto;
+	display : inline-block;
+	width : 70px;
+	background-color: black;
+	color : white;
+	text-align : center;
+	text-decoration : none;
+	padding : 16px;
+}
+.Top li:last-child{
+	margin-left : 80px;
+}
+.Top li:last-child a{
+	width : 250px;
+}
+/* Bottom ---------------------*/
+.underTab{
+	width : 800px;
+	margin : 20px auto;
+	list-style-type: none;
+	height : 55px;
+	background-color: white;
+}
+.underTab li{
+	margin-left : 55px;
+	float : left;
+	width : auto;
+}
+.underTab li a{
+	display : inline-block;
+	width : auto;
+	background-color: #1A1A1A;
+	color : white;
+	text-align : center;
+	text-decoration : none;
+	padding : 13px;
+}
+
+/* Top Bottom */
+ul li a:hover{/*리스트의 a에 마우스를 올려놓았을 때 상태*/
+	background-color: lightgray;
+	border-radius : 10px;
+	color : black;
+	border-bottom : 1px;
+}

@@ -1,0 +1,31 @@
+#msg{
+	position : relative;
+	top : 10px;
+	margin : 50px auto;
+	width : 400px;
+	height : 500px;
+	font-size : 30px;
+	font-weight : bold;
+}
+#msg > #msgTitle{
+	width : 400px;
+	height : 100px;
+	background-color : black;
+	color : white;
+	text-align : center;
+}
+#msgTitle > div{
+	display : inline-block;
+	margin : 10px auto;
+}
+#msgField > div{
+	display : inline-block;
+	margin : 160px auto;
+}
+#msg > #msgField{
+	background-color : #f0f0f0;
+	width : 400px;
+	height : 400px;
+	color : black;
+	text-align : center;
+}

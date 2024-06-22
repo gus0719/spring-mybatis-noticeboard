@@ -1,0 +1,67 @@
+body{
+	font-family : "Goudy Old Style";
+}
+
+/* DIV ----------------------------------*/
+#wrapper{
+	margin : auto;
+	width : 950px;
+}
+
+/* TABLE --------------------------------*/
+table{
+	margin : auto;
+	background-color : #000000;
+	border-width : 1px;
+	color : #2F4F4F;
+	width : 900px;
+	text-align : center;
+	padding : 1px;
+	font-size : 30px;
+}
+thead{
+	background-color : #696969;
+	color : #ffffff;
+	height : 60px;
+}
+tbody{
+	background-color : #FFFFF0;
+}
+tfoot{
+	background-color : #DCDCDC;
+}
+
+tr{
+	width : 250px;
+	height : 80px;
+}
+tr.even{
+	background-color : #F0FFF0;
+}
+td.inputbody{
+	width : 650px;
+}
+
+/* INPUT --------------------------------*/
+input{
+	font-family : Sans-serif;
+	font-size : 20px;
+}
+input.textfield{
+	width : 450px;
+	border : 1px solid gray;
+	border-radius : 5px;
+	padding : 10px;
+}
+input.button{
+	width : 150px;
+	height : 50px;
+	border : 1px solid black;
+	border-radius : 10px;
+}
+input#left{
+	margin-right : 50px;
+}
+input#right{
+	margin-left : 50px;
+}

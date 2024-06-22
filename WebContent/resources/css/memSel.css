@@ -1,0 +1,49 @@
+#wrapper{
+	margin : auto;
+	width : 950px;
+}
+body{
+	font-family : Arial;
+	font-size : 20px;
+}
+table{
+	margin : auto;
+	border : 1px solid black;
+	width : 900px;
+	text-align : center;
+}
+/*thead-----------------------------*/
+thead{
+	background-color : gray;
+	color : white;
+	height : 50px;
+}
+
+/*tbody-----------------------------*/
+tbody{
+	background-color : black;
+}
+tbody tr{
+	background-color: lightgray;
+	height : 40px;
+}
+tbody td{
+	border : 1px solid Dimgrey;
+}
+
+/*tfoot-----------------------------*/
+tfoot{
+	font-size : 16px;
+}
+tfoot tr{
+	background-color : white;
+}
+tfoot tr.even{
+	background-color : #e7e7e7;
+}
+tfoot tr:hover{
+	background-color : Moccasin;
+}
+tfoot td{
+	border-bottom : 1px solid gray;
+}
